@@ -1,9 +1,12 @@
-# scope-youtube
+# YouTube Plugin for Daydream Scope
 
-Scope plugin that adds a `youtube` input source mode to source nodes.
+Adds a `youtube` input source mode to Scope source nodes. Paste a YouTube URL and it plays the video on loop as a regular video input.
 
-Downloads a YouTube video via `yt-dlp` to a per-video cache, then reuses
-the built-in video-file decoder to play it back on loop.
+- **url**: any `youtube.com` or `youtu.be` URL (watch, shorts, or embed form).
+- **cache**: the video is downloaded once via `yt-dlp` into Scope's asset cache (`<scope-home>/cache/youtube/<video-id>.mp4`) and reused on subsequent connects.
+- **playback**: decoding and looping are handled by Scope's built-in video-file input source.
+
+Only `youtube.com` and `youtu.be` hosts are accepted. Requires `yt-dlp` and `av` to be importable.
 
 ## Install
 
