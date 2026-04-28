@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>YouTube Source — Daydream Gradient</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF4D6D"/>
+      <stop offset="55%" stop-color="#C9184A"/>
+      <stop offset="100%" stop-color="#7B2CBF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" ry="96" fill="url(#g)"/>
+  <rect width="512" height="512" rx="96" ry="96" fill="url(#glow)"/>
+  <path d="M198 168 L356 256 L198 344 Z" fill="#FFFFFF"/>
+</svg>

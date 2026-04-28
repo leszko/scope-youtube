@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>YouTube Source — Monogram</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1F0612"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" ry="96" fill="url(#bg)"/>
+  <g fill="#FF0033">
+    <path d="M120 112 L208 112 L256 208 L304 112 L392 112 L296 296 L296 400 L216 400 L216 296 Z"/>
+  </g>
+  <g transform="translate(312 304)">
+    <circle cx="48" cy="48" r="56" fill="#FFFFFF"/>
+    <path d="M36 24 L80 48 L36 72 Z" fill="#FF0033"/>
+  </g>
+</svg>
