@@ -57,6 +57,7 @@ The default download format is `bv*[ext=mp4][height<=1080]+ba[ext=m4a]` — best
 
 - `yt-dlp` (installed automatically as a dependency)
 - `av` (provided by Scope)
+- `ffmpeg` — install via your system package manager
 
 ## Development
 
