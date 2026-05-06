@@ -21,9 +21,14 @@ from scope.core.inputs.video_file import VideoFileInputSource
 
 logger = logging.getLogger(__name__)
 
-# Prefer mp4 video+audio at ≤1080p; fall back to whatever is available at ≤1080p.
+# Single-file selectors only — no `+` merge step, so ffmpeg isn't required.
+# The InputSource interface only exposes video frames, so we don't need audio;
+# pulling a video-only stream gives us up to 1080p without any muxing.
 _YTDLP_FORMAT = (
-    "bv*[ext=mp4][height<=1080]+ba[ext=m4a]/b[ext=mp4][height<=1080]/best[height<=1080]"
+    "bv*[ext=mp4][height<=1080]"
+    "/bv*[height<=1080]"
+    "/b[ext=mp4][height<=1080]"
+    "/best[height<=1080]"
 )
 
 # Only accept URLs on these hosts. Guards against yt-dlp's generic extractor
@@ -97,7 +102,6 @@ def _download(url: str, cache_path: Path) -> bool:
         "noplaylist": True,
         "quiet": True,
         "no_warnings": True,
-        "merge_output_format": "mp4",
         "overwrites": True,
         "writesubtitles": False,
         "writeautomaticsub": False,

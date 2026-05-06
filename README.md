@@ -51,7 +51,7 @@ YouTube Source (url)  ─►  Pipeline / Sink
 
 Videos are cached at `<scope-home>/cache/youtube/<video-id>.mp4` (default `<scope-home>` is `~/.daydream-scope`, override with the `DAYDREAM_SCOPE_HOME` env var). Delete a file from that directory to force a re-download on the next connect.
 
-The default download format is `bv*[ext=mp4][height<=1080]+ba[ext=m4a]` — best mp4 video + m4a audio at ≤1080p, with sensible fallbacks.
+The download format selects a single video-only stream up to 1080p (preferring mp4), so no muxing step is required and **`ffmpeg` does not need to be installed** — Scope's bundled PyAV (`av`) handles all decoding. Audio tracks aren't fetched because the source only exposes a `video` port.
 
 ## Requirements
 
